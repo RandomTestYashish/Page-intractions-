@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Airtel Thanks Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="phone" id="phone">
+
+  <!-- ===== A. STATUS BAR + TOP BAR + CATEGORY NAV (sticky) ===== -->
+  <header class="app-header" id="appHeader">
+    <div class="statusbar">
+      <div class="sb-left"><span class="sb-time">10:32</span>
+        <svg class="sb-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z" fill="currentColor"/></svg>
+      </div>
+      <div class="sb-right">
+        <svg class="sb-sig" viewBox="0 0 18 12" aria-hidden="true">
+          <rect x="0" y="8" width="2.6" height="4" rx="1" fill="currentColor"/>
+          <rect x="4" y="5.5" width="2.6" height="6.5" rx="1" fill="currentColor"/>
+          <rect x="8" y="3" width="2.6" height="9" rx="1" fill="currentColor"/>
+          <rect x="12" y="0" width="2.6" height="12" rx="1" fill="currentColor"/>
+        </svg>
+        <span class="sb-net">5G</span>
+        <span class="sb-batt"><i class="sb-batt-fill"></i><b>87</b></span>
+      </div>
+    </div>
+
+    <div class="topbar">
+      <button class="icon-btn menu-btn" type="button" aria-label="Menu">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h13M3 18h18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <div class="topbar-right">
+        <button class="icon-btn" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </button>
+        <button class="scanqr" type="button">Scan QR</button>
+        <button class="icon-btn" type="button" aria-label="Scan">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 8.5V5.5A1.5 1.5 0 0 1 5.5 4h3M15.5 4h3A1.5 1.5 0 0 1 20 5.5v3M20 15.5v3a1.5 1.5 0 0 1-1.5 1.5h-3M8.5 20h-3A1.5 1.5 0 0 1 4 18.5v-3"/><path d="M4 12h16" stroke-width="1.5"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="catnav" id="catNav" aria-label="Service categories">
+      <button class="cat is-active" type="button" data-cat="All">
+        <span class="cat-chip">
+          <svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M3.5 10.6 12 3.6l8.5 7"/><path d="M5.8 9.6V20h12.4V9.6"/><path d="M10 20v-5h4v5"/></svg>
+        </span>
+        <span class="cat-cap"></span>
+        <span class="cat-label">All</span>
+      </button>
+      <button class="cat" type="button" data-cat="Wi-Fi">
+        <span class="cat-chip">
+          <svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M3.5 9.2a13 13 0 0 1 17 0"/><path d="M6.8 12.8a8.3 8.3 0 0 1 10.4 0"/><path d="M10 16.3a3.6 3.6 0 0 1 4 0"/><circle cx="12" cy="19.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="cat-cap"></span>
+        <span class="cat-label">Wi-Fi</span>
+      </button>
+      <button class="cat" type="button" data-cat="Postpaid">
+        <span class="cat-chip">
+          <svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="4.5" y="3.5" width="15" height="17" rx="2.5"/><path d="M8 8h8M8 11.5h8M8 15h5" stroke-linecap="round"/></svg>
+        </span>
+        <span class="cat-cap"><em>Unlimited</em></span>
+        <span class="cat-label">Postpaid</span>
+      </button>
+      <button class="cat" type="button" data-cat="Roaming">
+        <span class="cat-chip">
+          <svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M21.2 2.9 2.9 9.9a.6.6 0 0 0 0 1.1l7.4 2.7 2.7 7.4a.6.6 0 0 0 1.1 0z"/><path d="M21.2 2.9 10.3 13.7"/></svg>
+        </span>
+        <span class="cat-cap"></span>
+        <span class="cat-label">Roaming</span>
+      </button>
+      <button class="cat" type="button" data-cat="Loan">
+        <span class="cat-chip">
+          <svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.2 3.2h5.6l-1.5 3.4h-2.6z"/><path d="M10.7 6.6C7.6 7.8 4.8 11 4.8 14.7c0 3.3 2.7 5.6 7.2 5.6s7.2-2.3 7.2-5.6c0-3.7-2.8-6.9-5.9-8.1z"/><path d="M9.9 11.4h4.2M9.9 13.5h4.2M13.2 11.4c0 2.2-1.8 2.4-3 2.4l3.2 3.5" stroke-width="1.4"/></svg>
+        </span>
+        <span class="cat-cap"></span>
+        <span class="cat-label">Loan</span>
+      </button>
+      <span class="cat-underline" id="catUnderline"></span>
+    </nav>
+  </header>
+
+  <main class="content">
+
+    <!-- ===== C. RECHARGE / EXPIRY CARD ===== -->
+    <section class="sec sec-pack">
+      <div class="pack-wrap">
+        <span class="pack-status">Pack Status</span>
+        <article class="pack-card">
+          <div class="pack-top">
+            <span class="pack-brand"><img src="assets/airtel-logo.svg" alt="" class="brand-mark"><b>Dth</b></span>
+            <span class="pack-acc">3004211238-001</span>
+          </div>
+          <h2 class="pack-title">Your ₹558.47 pack will expire in 3 days</h2>
+          <p class="pack-sub">Recharge now to continue watching movies and shows on your TV.</p>
+          <button class="btn-dark" type="button" id="rechargeNow">Recharge Now</button>
+        </article>
+      </div>
+    </section>
+
+    <div class="band"></div>
+
+    <!-- ===== D. MY SERVICES ===== -->
+    <section class="sec">
+      <div class="sec-head"><h3 class="sec-title">My Services</h3></div>
+      <div class="hscroll hscroll--services" data-drag>
+        <article class="svc-card tap">
+          <img src="assets/airtel-logo.svg" alt="" class="svc-ico">
+          <div class="svc-txt">
+            <b>4 Services</b>
+            <span class="svc-sub-red">Dth expiring in</span>
+          </div>
+        </article>
+        <article class="svc-card tap">
+          <img src="assets/apb-logo.svg" alt="" class="svc-ico svc-ico--bank">
+          <div class="svc-txt">
+            <b>Bank Account</b>
+            <span class="svc-bal"><i id="balMask">₹••••••</i>
+              <span class="svc-view" id="balToggle">View
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg>
+              </span>
+            </span>
+          </div>
+          <span class="svc-badge">Payments Bank</span>
+        </article>
+      </div>
+    </section>
+
+    <div class="band"></div>
+
+    <!-- ===== E. BUY AIRTEL PRODUCTS ===== -->
+    <section class="sec">
+      <div class="sec-head"><h3 class="sec-title">Buy Airtel Products</h3><button class="link-all" type="button" id="viewAll">View All</button></div>
+      <div class="prod-grid" id="prodGrid">
+        <button class="prod tap" type="button"><span class="prod-label">Personal Loan</span><img src="assets/il-loan.svg" alt=""></button>
+        <button class="prod tap" type="button"><span class="prod-label">Credit Card</span><img src="assets/il-card.svg" alt=""></button>
+        <button class="prod tap" type="button"><span class="prod-label">Fixed Deposit</span><img src="assets/il-fd.svg" alt=""></button>
+        <button class="prod tap" type="button"><span class="prod-label">Credit Score</span><img src="assets/il-score.svg" alt=""></button>
+        <button class="prod tap" type="button"><span class="prod-tag">Refer</span><span class="prod-label">Expert Wi-Fi</span><img src="assets/il-wifi.svg" alt=""></button>
+        <button class="prod tap" type="button"><span class="prod-tag">20+OTTs</span><span class="prod-label">Get Postpaid SIM</span><img src="assets/il-sim.svg" alt=""></button>
+        <button class="prod tap" type="button"><span class="prod-label">Refer Bank &amp; Earn</span><img src="assets/il-bank.svg" alt=""></button>
+        <button class="prod tap" type="button"><span class="prod-label">New Prepaid SIM</span><img src="assets/il-prepaid.svg" alt=""></button>
+        <button class="prod tap" type="button"><span class="prod-label">DTH</span><img src="assets/il-dth.svg" alt=""></button>
+      </div>
+    </section>
+
+    <!-- ===== F. PROMOTIONAL STRIP ===== -->
+    <section class="sec">
+      <button class="promo-strip tap" type="button">
+        <span class="promo-bolt">
+          <svg viewBox="0 0 24 24"><path d="M13.5 2 4 13.6h6.2L9.8 22 20 9.9h-6.6z" fill="url(#bolt)"/><defs><linearGradient id="bolt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a00"/><stop offset="1" stop-color="#e40000"/></linearGradient></defs></svg>
+        </span>
+        <span class="promo-text">Up to 2X speeds &amp; unlimited data on Postpaid</span>
+        <svg class="promo-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </section>
+
+    <div class="band"></div>
+
+    <!-- ===== G. MANAGE SERVICES ===== -->
+    <section class="sec">
+      <div class="sec-head"><h3 class="sec-title">Manage Services</h3></div>
+      <div class="manage-grid">
+        <button class="mg tap" type="button"><span class="mg-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 0-2.5 5.8"/><path d="M20 6.5V12h-5.2"/><path d="M9.6 9.5h4.8M9.6 12h4.8M13.4 9.5c0 2.6-2.1 2.7-3.4 2.7l3.7 4" stroke-width="1.4"/></svg>
+        </span><span class="mg-label">Recharge</span></button>
+        <button class="mg tap" type="button"><span class="mg-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4L6 21z"/><path d="M9.2 8h5.6M9.2 11.2h5.6M13.6 8c0 2.4-1.9 2.5-3.1 2.5l3.4 3.6" stroke-width="1.4"/></svg>
+        </span><span class="mg-label">Pay Bills</span></button>
+        <button class="mg tap" type="button"><span class="mg-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 20c0-3.6 2.9-6.2 6.5-6.2s6.5 2.6 6.5 6.2"/><path d="M18.5 4.5 20 6l2.5-2.5" stroke-width="1.4"/></svg>
+        </span><span class="mg-label">Claim OTTs &amp; More</span></button>
+        <button class="mg tap" type="button"><span class="mg-circle mg-circle--hot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M21.2 2.9 2.9 9.9a.6.6 0 0 0 0 1.1l7.4 2.7 2.7 7.4a.6.6 0 0 0 1.1 0z"/><path d="M21.2 2.9 10.3 13.7"/></svg>
+        </span><span class="mg-label">International Roaming</span></button>
+        <button class="mg tap" type="button"><span class="mg-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6.2l9-2v11.4"/><circle cx="6.8" cy="18" r="2.6"/><circle cx="15.8" cy="15.6" r="2.6"/></svg>
+        </span><span class="mg-label">Set Hellotunes</span></button>
+        <button class="mg tap" type="button"><span class="mg-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="11" cy="10.5" rx="7.6" ry="6.6"/><path d="M11 14.5V20M7.5 20h7"/><path d="M16 7.2 19.4 4"/><circle cx="20.2" cy="3.4" r="1.4" fill="currentColor" stroke="none"/></svg>
+        </span><span class="mg-label">My DTH Channels</span></button>
+        <button class="mg tap" type="button"><span class="mg-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3.5 9.2a13 13 0 0 1 17 0"/><path d="M6.8 12.8a8.3 8.3 0 0 1 10.4 0"/><path d="M10 16.3a3.6 3.6 0 0 1 4 0"/><circle cx="12" cy="19.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </span><span class="mg-label">My Expert Wi-Fi</span></button>
+        <button class="mg tap" type="button"><span class="mg-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8"/></svg>
+        </span><span class="mg-label">More</span></button>
+      </div>
+    </section>
+
+    <div class="band"></div>
+
+    <!-- ===== H. EXPLORE AIRTEL PRODUCTS ===== -->
+    <section class="sec">
+      <div class="sec-head"><h3 class="sec-title">Explore Airtel Products</h3></div>
+      <div class="hscroll hscroll--explore" data-drag>
+        <button class="ex-card ex-red tap" type="button">
+          <svg class="ex-art" viewBox="0 0 24 24"><path d="M13.5 2 4 13.6h6.2L9.8 22 20 9.9h-6.6z" fill="#fff"/></svg>
+          <span class="ex-title">Fast Lane<br>Postpaid</span><span class="ex-arrow">→</span>
+        </button>
+        <button class="ex-card ex-indigo tap" type="button">
+          <svg class="ex-art" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 9.2a13 13 0 0 1 17 0"/><path d="M6.8 12.8a8.3 8.3 0 0 1 10.4 0"/><path d="M10 16.3a3.6 3.6 0 0 1 4 0"/><circle cx="12" cy="19.4" r="1.2" fill="#fff" stroke="none"/></svg>
+          <span class="ex-title">Expert<br>Wi-Fi</span><span class="ex-arrow">→</span>
+        </button>
+        <button class="ex-card ex-pink tap" type="button">
+          <svg class="ex-art" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6z" fill="#fff" opacity=".95"/><rect x="8.8" y="11" width="6.4" height="7" rx="1.4" fill="#e0007a"/></svg>
+          <span class="ex-title">Prepaid<br>SIM</span><span class="ex-arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="band"></div>
+
+    <!-- ===== I. CURATED FOR YOU ===== -->
+    <section class="sec sec--flush">
+      <div class="sec-head"><h3 class="sec-title">Curated For You</h3></div>
+      <div class="hscroll hscroll--curated snap-center" data-drag>
+        <article class="cur-card cur-teal tap">
+          <img class="cur-art" src="assets/il-dish-big.svg" alt="">
+          <div class="cur-body">
+            <h4>Custom DTH packs<br>for you</h4>
+            <span class="pill-dark">Starting at ₹1500</span>
+          </div>
+        </article>
+        <article class="cur-card cur-violet tap">
+          <img class="cur-art" src="assets/il-tv.svg" alt="">
+          <div class="cur-body">
+            <h4>Xstream Play<br>on your TV</h4>
+            <span class="pill-dark">Explore packs</span>
+          </div>
+        </article>
+        <article class="cur-card cur-amber tap">
+          <img class="cur-art" src="assets/il-wifi.svg" alt="">
+          <div class="cur-body">
+            <h4>Expert Wi-Fi<br>for your home</h4>
+            <span class="pill-dark">Check availability</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== J. SMALL SERVICE CARDS ===== -->
+      <div class="mini-row">
+        <button class="mini tap" type="button"><span class="mini-label">Call Manager</span><img src="assets/il-callmgr.svg" alt=""></button>
+        <button class="mini tap" type="button"><span class="mini-label">Rewards &amp; OTTs</span><img src="assets/il-rewards.svg" alt=""></button>
+        <button class="mini tap" type="button"><span class="mini-label">Refer &amp; Earn<br>₹300</span><img src="assets/il-referearn.svg" alt=""><span class="mini-save">SAVE<br><b>₹300</b></span></button>
+      </div>
+    </section>
+
+    <div class="band"></div>
+
+    <!-- ===== K. RECHARGE FOR OTHERS ===== -->
+    <section class="sec">
+      <div class="sec-head"><h3 class="sec-title">Recharge For Others</h3></div>
+      <div class="hscroll hscroll--packs" data-drag>
+        <article class="pk pk-violet tap">
+          <span class="pk-name">Box Office Pack</span>
+          <span class="pk-price">₹200</span>
+          <span class="pk-big"><b>20+</b><i>OTTs</i></span>
+        </article>
+        <article class="pk pk-dark tap">
+          <span class="pk-name">Blockbuster Pack</span>
+          <span class="pk-price">₹100</span>
+          <span class="pk-big"><b>19+</b><i>OTTs</i></span>
+          <span class="pk-logos"><img src="assets/logo-sonyliv.svg" alt="SonyLIV"><em>1L</em><em>6GB</em></span>
+        </article>
+        <article class="pk pk-teal tap">
+          <span class="pk-name">Data Pack</span>
+          <span class="pk-price">₹49</span>
+          <span class="pk-big"><b>6GB</b><i>Data</i></span>
+        </article>
+      </div>
+    </section>
+
+    <div class="band"></div>
+
+    <!-- ===== L. YOU MIGHT LIKE ===== -->
+    <section class="sec">
+      <div class="sec-head"><h3 class="sec-title">You Might Like</h3></div>
+      <div class="hscroll hscroll--like" data-drag>
+        <article class="like like-red tap">
+          <img class="like-art" src="assets/il-travel.svg" alt="">
+          <h4>Access best local<br>networks abroad</h4>
+          <span class="btn-dark btn-sm">Buy Pack</span>
+        </article>
+        <article class="like like-grey tap">
+          <img class="like-art" src="assets/il-refer.svg" alt="">
+          <h4>Pay ₹300 less on<br>your next bill</h4>
+          <span class="btn-dark btn-sm">Refer Wi-Fi</span>
+        </article>
+        <article class="like like-mint tap">
+          <img class="like-art" src="assets/il-score.svg" alt="">
+          <h4>Check your free<br>credit score</h4>
+          <span class="btn-dark btn-sm">Check Now</span>
+        </article>
+      </div>
+    </section>
+
+    <div class="band"></div>
+
+    <!-- ===== M. FEATURING FRESH ===== -->
+    <section class="sec">
+      <div class="sec-head"><h3 class="sec-title">Featuring Fresh</h3></div>
+      <article class="fresh tap">
+        <h4 class="fresh-title">The 90s are back</h4>
+        <p class="fresh-sub">Watch ad-free movies &amp; songs</p>
+        <img class="fresh-art" src="assets/il-tv.svg" alt="">
+        <span class="pill-dark fresh-cta">Add @ ₹42/month</span>
+      </article>
+    </section>
+
+    <!-- ===== N. CLAIM / BENEFITS ===== -->
+    <section class="claim">
+      <div class="claim-head">
+        <div>
+          <h3 class="claim-title">Claim</h3>
+          <p class="claim-kicker">Your Benefits</p>
+        </div>
+        <img class="claim-art" src="assets/il-claim.svg" alt="">
+      </div>
+      <div class="hscroll hscroll--benefits" data-drag>
+        <article class="ben tap">
+          <img class="ben-logo" src="assets/logo-netflix.svg" alt="">
+          <b class="ben-title">Netflix Basic</b>
+          <span class="ben-sub">Included in your Airtel Xstream Play Subscription</span>
+          <span class="ben-cta">CLAIM NOW →</span>
+        </article>
+        <article class="ben tap">
+          <img class="ben-logo" src="assets/logo-duolingo.svg" alt="">
+          <b class="ben-title">Super Duolingo</b>
+          <span class="ben-sub">Worth ₹3120, free with Airtel</span>
+          <span class="ben-cta">CLAIM NOW →</span>
+        </article>
+        <article class="ben tap">
+          <img class="ben-logo" src="assets/logo-prime.svg" alt="">
+          <b class="ben-title">Prime Lite</b>
+          <span class="ben-sub">3 months free on select postpaid plans</span>
+          <span class="ben-cta">CLAIM NOW →</span>
+        </article>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Recharge bottom sheet -->
+<div class="sheet-scrim" id="scrim" hidden></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+  <span class="sheet-grab"></span>
+  <h4 id="sheetTitle" class="sheet-title">Recharge DTH</h4>
+  <p class="sheet-sub">3004211238-001 · Pack expires in 3 days</p>
+  <div class="sheet-opts" id="sheetOpts">
+    <button class="sheet-opt is-sel" type="button"><b>₹558.47</b><span>Same as current pack · 1 month</span></button>
+    <button class="sheet-opt" type="button"><b>₹1,599</b><span>3 months · Save ₹76</span></button>
+    <button class="sheet-opt" type="button"><b>₹6,150</b><span>12 months · Save ₹552</span></button>
+  </div>
+  <button class="btn-dark" type="button" id="sheetPay">Proceed to Pay</button>
+  <button class="sheet-close" type="button" id="sheetClose">Close</button>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
