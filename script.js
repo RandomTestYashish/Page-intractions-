@@ -194,6 +194,13 @@
     toast((name ? name.textContent.replace(/\s+/g, ' ').trim() : 'Opening') + ' →');
   });
 
+  /* -------------------------------- centre the curated carousel on load */
+  var curatedMain = document.getElementById('curatedMain');
+  if (curatedMain) {
+    var rail = curatedMain.parentNode;
+    rail.scrollLeft = curatedMain.offsetLeft - (rail.clientWidth - curatedMain.clientWidth) / 2;
+  }
+
   /* ------------------------------------------------------------- startup */
   placeUnderline();
   applyScroll();
